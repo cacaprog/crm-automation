@@ -19,18 +19,21 @@ O sistema foi projetado para ser serverless, escalável e de baixa manutenção,
 
 ## **Estrutura do Projeto**
 
-.  
-├── Dockerfile \# Define o ambiente de contêiner  
-├── .dockerignore \# Exclui arquivos desnecessários do build  
-├── main.py \# Ponto de entrada da aplicação Flask  
-├── requirements.txt \# Dependências do projeto  
-├── models/  
-│ └── lead.py \# Data class que representa um lead  
-└── core/  
- ├── email\_processor.py \# Módulo para ler e processar e-mails (IMAP)  
- ├── sheet\_manager.py \# Módulo para interagir com o Google Sheets  
- ├── lead\_distributor.py \# Módulo com a lógica de distribuição de leads  
- └── crm\_client.py \# Cliente para a API do CRM
+```
+.
+├── Dockerfile              # NOVO: Define o ambiente de contêiner
+├── .dockerignore           # NOVO: Exclui arquivos desnecessários do build
+├── main.py                 # Ponto de entrada da aplicação Flask
+├── requirements.txt        # Dependências do projeto
+├── models/
+│   └── lead.py             # Data class que representa um lead
+└── core/
+    ├── email_processor.py  # Módulo para ler e processar e-mails (IMAP)
+    ├── sheet_manager.py    # Módulo para interagir com o Google Sheets
+    ├── lead_distributor.py # Módulo com a lógica de distribuição de leads
+    └── crm_client.py       # Cliente para a API do CRM
+
+```
 
 ## **Containerização com Docker**
 
